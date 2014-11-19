@@ -2,7 +2,7 @@
 	$tekst 			= 	"Test 123...";
 	$_tekst 		= 	"Test 456";
 	$_tekst 		= 	"test";
-	$zi_n 			= 	"Jean D'Haeseleir gaat naar Praag!!";
+	$zi_n 			= 	"Jean D\'Haeseleir gaat naar Praag!!";
 	$beschrijving 	= 	"Vogelbekdier";
 ?>
 
