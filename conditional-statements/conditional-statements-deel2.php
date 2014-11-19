@@ -1,7 +1,7 @@
 <?php
 	
 	$getal 	= 	1; 
-	$dag 	=	'dag';
+	$dag 	=	'Deze dag bestat niet';
           
     if ( $getal == 1 ) 
     { 
@@ -36,6 +36,11 @@
     if ( $getal == 7 ) 
     { 
         $dag = 'zondag'; 
+    } 
+
+    if ( $getal >= 1 && $getal <= 7 ) 
+    { 
+        $dag = strtoupper($dag);
     } 
 
     $dag = strtoupper($dag);
