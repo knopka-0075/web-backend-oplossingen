@@ -9,6 +9,11 @@
 		echo $value . " ";
 	}
 
+	sort($unike);
+	foreach ($unike as $key => $value) {
+		echo $value . " ";
+	}
+
 
 
 

@@ -7,10 +7,10 @@
 	$dierGevonden = in_array($zoekDier, $dieren);
 
 	$zoogdieren = array('leeuw', 'olifant', 'tijger');
-	$dierenLijst = array_merge($zoogdieren, $dieren);
+	$dierenLijst = array_merge($dieren, $zoogdieren);
 
 
-	sort($dieren, SORT_LOCALE_STRING); 
+	sort($dieren); 
 ?>
 
 <!DOCTYPE html>
