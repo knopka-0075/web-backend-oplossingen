@@ -32,6 +32,15 @@ Belangrijk is dat de bedrijven de hervormingsplannen van enkele politici in Wash
 	  					),
 					);
 
+/*$artikelsContener = array();
+
+foreach ($artikels as $id => $artikel)
+ {
+	$artikelsContener [$id] = $artikel;
+	$artikelsContener [$id] ['inhoudVerkort'] = substr($artikel['inhoud'], 0, 150);
+}
+
+
 $bepaldeArtikl = false;
 $nietGevondenArtikel = false;
 
@@ -50,8 +59,22 @@ if(isset($_GET ['id'] ) )
 	{
 		$nietGevondenArtikel = true;
 	}
-}
+}*/
 
+
+	$bepaldeArtikl	=	false;
+	$artikelsContener	=	array();
+	foreach( $artikels as $id => $artikel )
+	{
+		$artikelsContener[ $id ]	=	$artikel;
+		$artikelsContener[ $id ][ 'inhoudVerkort' ]	=	substr( $artikel[ 'inhoud' ], 0, 50 );
+	}
+	if ( isset( $_GET['id'] ) )
+	{
+		$id 	=	$_GET['id'];
+		$bepaldeArtikl	=	true;
+		$artikelsContener	=	$artikelsContener[ $id ];
+	}
 
 
 ?>
@@ -78,10 +101,10 @@ if(isset($_GET ['id'] ) )
 
 		img
 		{
-			width: 100%;
+			max-width: 100%;
 		}
 
-		.grot {
+		.grot img{
 			float:right;
 			margin-left: 16px;
 
@@ -95,22 +118,27 @@ if(isset($_GET ['id'] ) )
 <body>
 
 
-	<?php if(!$nietGevondenArtikel) :?>
+<?php if ($bepaldeArtikl == false): ?>
+			
+			<?php foreach ($artikelsContener as $id => $artikel): ?>
 
-		<?php foreach ($artikels as $id => $artikel) : ?>
-
-		<div class = "grijs <?php echo ( !$bepaldeArtikl ) ? 'kleine': 'grot' ; ?>" >
-
-			<h1><?php echo $artikel ['titel']?></h1>
-			<h2><?php echo $artikel ['datum']?></h2>
-			<img src="img/<?php echo $artikel['afbeelding'] ?>" alt="<?php echo $artikel['afbeeldingBeschrijving'] ?>">
-			<p><?php echo $artikel ['inhoud']?></p>
-
-		</div>
-
-		<?php endforeach ?>
-
-	<?php endif ?>
+				<article class="kleine">
+					<h1><?= $artikel['titel'] ?> | <?= $artikel['datum'] ?></h1>
+					<p><?= $artikel['inhoudVerkort'] . '...' ?></p>
+					<img src="img/<?= $artikel[ 'afbeelding' ] ?>" alt="<?= $artikel[ 'afbeeldingBeschrijving' ] ?>" >
+					<a href="<?= $_SERVER[ 'PHP_SELF' ] ?>?id=<?= $id ?>">Lees meer</a>
+				</article>
+				
+			<?php endforeach ?>
+		<?php else: ?>
+			
+			<article class="grot">
+				<h1><?= $artikelsContener['titel'] ?> | <?= $artikel['datum'] ?></h1>
+				<p><?= $artikelsContener['inhoud'] ?></p>
+				<img src="img/<?= $artikelsContener[ 'afbeelding' ] ?>" alt="<?= $artikelsContener[ 'afbeeldingBeschrijving' ] ?>">
+				
+			</article>
+		<?php endif ?>
 
 
 </body>
