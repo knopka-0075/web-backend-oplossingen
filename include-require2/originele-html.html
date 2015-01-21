@@ -1,0 +1,157 @@
+<?php
+	
+	var_dump("test");
+
+?>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Opdracht include/require</title>
+
+        <style>
+
+        	.group:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+        	body{
+                padding:0px;
+                margin:0;
+                font-size:14px;
+            }
+
+            header
+            {
+                background-color:#2B3536;
+                color:#FFFFFF;
+                padding:12px 6px;
+            }
+
+            header .logo
+            {
+                float:left;
+                font-size:18px;
+            }
+
+            header .logo a
+            {
+                float:left;
+                font-size:18px;
+                text-decoration:none;
+            }
+            header .logo span
+            {
+                font-weight:bold;
+            }
+
+            header a
+            {
+               color:#FFFFFF; 
+            }
+            nav
+            {
+                float:right;
+            }
+
+            nav ul
+            {
+                list-style-type:none;
+                padding:0px;
+                margin-top:0;
+            }
+            
+             nav li
+             {
+                display:inline;
+                padding:5px;
+                padding-left:18px;
+             }
+            
+            .body
+            {
+                width:80%;
+                margin:0 auto;
+            }
+            
+            .body article
+            {
+                width:26%;
+                margin-right:5%;
+                padding:0 2%;
+                float:left;
+                background-color:#EEEEEE;
+            }
+
+            .body article:nth-child(3n+1)
+            {
+                margin-right:0;
+            }
+
+             .body article h1:first-child
+            {
+                font-size:24px;
+                margin:12px 0;
+            }
+            
+            footer
+            {
+                margin-top:32px;
+                padding:6px;
+                background-color:#5FC8D1;
+                color:#FFFFFF;
+                text-align:center;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+    	 <header class="group">
+            <div class="logo">
+               <a href="#">Daily <span>PHP</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Nieuws</a></li>
+                    <li><a href="#">Onze Redactie</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="body group">
+            <h1>Nieuws</h1>
+
+            <article>
+                <h1>PHP 8.4 gereleased</h1>
+                <p>De nieuwste versie van PHP bevat uitbreidingen op oa. mind control-facades, in-browser 3d projecties en de API voor drones.</p>
+                <p>Kernwoorden: new, PHP 8.4</p>
+
+            </article>
+
+            <article>
+                <h1>Zymphovel framework</h1>
+                <p>Wordt Zymphovel het nieuwste PHP-framework dat de wereld in een sneltempo zal veroveren?</p>
+                <p>Kernwoorden: frameworks</p>
+            </article>
+
+            <article>
+                <h1>Rasmus Lerdorf vermist</h1>
+                <p>De geestelijke vader van PHP Rasmus Lerdorf is sinds vorige week vermist nadat hij met zijn privé-jet richting Ibiza vertrok.</p>
+                <p>Kernwoorden: bizar, rasmus lerdorf, feestneus</p>
+            </article>
+        </section>
+
+        <footer>
+            Daily PHP is een blog over PHP. 
+        </footer>
+
+
+        
+    </body>
+</html>

@@ -3,7 +3,7 @@
 
 	if (isset($_GET['logout'])) {
 	
-			setcookie('identification','', time() -360 );
+			setcookie('identification','', time() - 360 );
 			
 			header('location: cookies_deel1.php');
 
@@ -23,7 +23,7 @@
 			if ( $_POST[ 'username' ] == $userData[ 0 ] && $_POST[ 'password' ] == $userData[ 1 ] )
 				{
 					setcookie( 'identification', true, time() +360 );
-					header( 'location: cookies_deel1.php' );
+					header( 'location: ' . $_SERVER[ 'PHP_SELF '] );
 				}
 			else 
 				{
@@ -58,7 +58,7 @@
 
 		<?php if ( !$isIdentification ): ?>
 	
-    <form action="cookies_deel1.php" method="POST">
+    <form action=" $_SERVER['PHP_SELF']" method="POST">
 
 			<ul>
 				<li>

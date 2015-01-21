@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>Portfolio</title>
+		
+		<style>		
+			.clearfix:after {
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+			
+			body
+			{
+				margin:0px;
+				font-family:"Arial Bold", sans-serif;
+			}
+			
+			
+			/*Container*/
+			.container
+			{
+				width:984px;
+				margin:0 auto;
+			}
+			
+			/*HEADER*/
+			.head
+			{
+				background-color:grey;
+				text-align:right;
+			}
+			
+			.head a
+			{
+				padding:5px 20px;
+			}
+			
+			.hero {
+				width:100%;
+				height:500px;
+				background:url('ai-weiwei.jpg') no-repeat 0 0;
+				background-size:cover;
+				position:relative;
+				margin-top: -16px;
+			}
+			
+			.caption
+			{
+				position:absolute;
+				bottom:0px;
+				padding:10px;
+				width:100%;
+				background-color:rgba(255,255,255,0.5);
+			}
+			/* NAV */
+						
+			.nav {
+				background:#e1e1e1;
+			}
+			
+			.nav ul
+			{
+				text-align:right;
+				margin-top: -46px;
+				height: 40px;
+				padding-top: 10px;
+			}
+			
+			.nav li
+			{
+				display:inline;
+			}
+			
+			.nav a
+			{
+				display:inline-block;
+				color:white;
+				text-decoration:none;
+				text-align:center;
+				padding:5px 20px;
+			}
+
+			.nav ul li a:hover {
+			color:#2C9FF4;
+			}
+
+			/*BODY*/
+			section {
+				height:300px;
+			}
+			.main-content
+			{
+				float:left;
+				width:70%;
+				background-color:lightgrey;
+				height:100%;
+			}			
+			
+			.side-panel
+			{
+				float:right;
+				background-color:darkgrey;
+				height:100%;
+				width:30%;
+			}
+			/*Footer*/
+			footer div 
+			{
+				color:white;
+				float:left;
+				width:333px;
+				background-color:#2C9FF4;
+				padding-left: 10px;
+			}
+			footer div:last-child
+			{
+				width:288px;
+				margin:0;
+			}
+
+			h1{
+					color:#2C9FF4;
+					margin-left: 20px;
+					font-size: 18px;
+				}
+
+			h2{
+					color:#2C9FF4;
+					margin-left: 10px;
+					font-size: 16px;
+				}
+			p{
+				margin-left: 10px;
+				font-size: 14px;
+
+			}
+				.artikels{
+					list-style-type: none;
+					
+				}
+
+				.artikels li{
+					margin-right: 20px;
+					color: #fff;
+
+				}
+
+
+
+		</style>
+</head>
+
+<body>
+	
+	<div class="container">
+	<header>
+		<h1>Olga <span>Povitukhina</span></h1>
+		<div class="nav">
+			<ul>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div class="hero">
+			<div class="caption">Portfolio</div>
+		</div>
+				
+	</header>
+	
+	<section class="clearfix">
+		<div class="main-content">
+			<h2>De Animaris Rhonoceros Transport</h2>
+			<p>De Animaris Rhonoceros Transport weegt 2,8 ton en is een zijtak in de strandbeesten evolutie maar kan desondanks door één enkele persoon worden voortbewogen door slim gebruik te maken van de wind. Je kunt er in zitten. Zoals een auto een vervoertuigd paard is en een vliegtuig gezien kan worden als een vervoertuigde vogel, zo kan de Animaris Rhinoceros Transport opgevat worden als een vervoertuigde Animaris (de Latijnse naam voor strandbeest).</p>
+                                        
+            <p>De Animaris Rhinoceros Transport die het stadsdeel Nieuw-West in de collectie heeft, is ontworpen door de kunstenaar maar de technische ontwikkeling en realisatie van dit lopende kunstwerk is in 2004 gedaan door het bedrijf Heijmerink | Wagemakers, Nieuwegein.</p>
+
+            <p>Het ontwerp waarmee kunstenaar Theo Jansen bij Heijmerink|Wagemakers kwam, was een kartonnen schaalmodel van 20 cm hoog waarin de unieke beweging van de Animaris al lag opgesloten. Het werkelijke beest is 4,5 meter hoog en 6 meter breed.</p>
+
+            </div>
+		<div class="side-panel">
+			<h2>Andere artikels</h2>
+                <ul class="artikels">
+                   <li>Handgestuurde Animaris Geneticus Ondula</li>
+                   <li>Alles over de Jansen's Linkage</li>
+                   <li>The Great Pretender - boek</li>
+                   <li>Expositie in Japan</li>
+                   <li>Interview in DWDD</li>
+                </ul>
+		</div>
+	</section>	
+	
+	<footer>
+		<div class="column-01">Kolom 1</div>
+		<div class="column-02">Kolom 2</div>
+		<div class="column-03">Kolom 2</div>
+	</footer>	
+</body>
+</html>
