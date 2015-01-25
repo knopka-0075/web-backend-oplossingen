@@ -1,0 +1,11 @@
+<h2>Nieuws</h2>
+<hr>
+<?php foreach ($artikels  as $id => $artikel): ?>
+	<article>
+	    <h2><?= $artikel['title'] ?></h2>
+	    <hr>
+	    <p><?= $artikel['text'] ?></p>
+	    <p>Kernwoorden: <?= join( ',' , $artikel['tags'] ) ?></p>
+
+	</article>
+<?php endforeach ?>

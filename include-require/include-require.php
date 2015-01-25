@@ -1,21 +1,20 @@
 <?php
 
-$artikels = array(
-                'title' => 'PHP 8.4 gereleased',
-                'text' => 'De nieuwste versie van PHP bevat uitbreidingen op oa. mind control-facades, in-browser 3d projecties en de API voor drones.',
-                'tags' => array('Kernwoorden: new, PHP 8.4')
-                );
+        $artikels[] = array(
+                        'title' => 'PHP 8.4 gereleased',
+                        'text'  =>      'De nieuwste versie van PHP bevat uitbreidingen op oa. mind control-facades, in-browser 3d projecties en de API voor drones.',
+                        'tags'  =>      array('PHP 8.4' )
+                        );
 
-$artikels = array(
-                'title' => 'Zymphovel framework',
-                'text' => 'Wordt Zymphovel het nieuwste PHP-framework dat de wereld in een sneltempo zal veroveren?',
-                'tags' => array('Kernwoorden: frameworks')
-                );
+        $artikels[] = array(
+                        'title' => 'Zymphovel framework',
+                        'text'  =>      'Wordt Zymphovel het nieuwste PHP-framework dat de wereld in een sneltempo zal veroveren?',
+                        'tags'  =>      array( 'frameworks' )
+                        );
 
-$artikels = array(
-                'title' => 'Rasmus Lerdorf vermist',
-                'text' => 'De geestelijke vader van PHP Rasmus Lerdorf is sinds vorige week vermist nadat hij met zijn privé-jet richting Ibiza vertrok.',
-                'tags' => array('Kernwoorden: bizar, rasmus lerdorf, feestneus')
-                    
-                );
+        $artikels[] = array(
+                        'title' => 'Rasmus Lerdorf vermist',
+                        'text'  =>      'De geestelijke vader van PHP Rasmus Lerdorf is sinds vorige week vermist nadat hij met zijn privé-jet richting Ibiza vertrok.',
+                        'tags'  =>      array( 'lerdorf' )
+                        );
 ?>
