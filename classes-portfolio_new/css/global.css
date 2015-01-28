@@ -1,4 +1,4 @@
-	.clearfix:after {
+			.clearfix:after {
 				content: ".";
 				display: block;
 				clear: both;
@@ -36,7 +36,7 @@
 			.hero {
 				width:100%;
 				height:500px;
-				background:url('ai-weiwei.jpg') no-repeat 0 0;
+				background:url('../img/ai-weiwei.jpg') no-repeat 0 0;
 				background-size:cover;
 				position:relative;
 				margin-top: -16px;
@@ -142,3 +142,4 @@
 					color: #fff;
 
 				}
+
