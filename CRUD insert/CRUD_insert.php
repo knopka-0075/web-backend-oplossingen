@@ -1,5 +1,59 @@
 <?php
 
+$message	=	false;
+
+
+	if ( isset( $_POST[ 'submit' ] ) )
+	{
+
+		try
+		{
+			$db = new PDO('mysql:host=localhost;dbname=bieren', 'root', '' ); 
+
+			$querySelect	=	'INSERT INTO brouwers (brnaam,
+														 adres, 
+														 postcode, 
+														 gemeente, 
+														 omzet)
+										VALUES ( :brnaam, 
+											:adres, 
+											:postcode, 
+											:gemeente, 
+											:omzet )';
+
+			$brouwerStatement = $db->prepare( $querySelect );
+
+			$brouwerStatement->bindParam( ':brnaam', $_POST[ 'brnaam' ] );
+			$brouwerStatement->bindParam( ':adres', $_POST[ 'adres' ] );
+			$brouwerStatement->bindParam( ':postcode', $_POST[ 'postcode' ] );
+			$brouwerStatement->bindParam( ':gemeente', $_POST[ 'gemeente' ] );
+			$brouwerStatement->bindParam( ':omzet', $_POST[ 'omzet' ] );
+
+			$isAdded = $brouwerStatement->execute();
+
+			if ( $isAdded )
+			{
+				$insertId			=	$db->lastInsertId();
+				$message['type']	=	'success';
+				$message['text']	=	'Brouwerij succesvol toegevoegd. Het unieke nummer van deze brouwerij is ' . $insertId . '.';
+			}
+			else
+			{
+				$message['type']	=	'error';
+				$message['text']	=	'Er ging iets mis met het toevoegen, probeer opnieuw';
+			}
+
+		}
+
+		catch ( PDOException $e )
+		{
+			$message['type']	=	'error';
+			$message['text']	=	'De connectie is niet gelukt.';
+		}
+
+
+
+	}
 
 
 ?>

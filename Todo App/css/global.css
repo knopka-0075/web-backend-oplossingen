@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html
+{
+	font-family: sans-serif;
+	color:#454545;;
+}
+
+ul
+{
+	list-style-type:none;
+}
+
+li
+{
+	margin-bottom: 12px;
+	display:table-row;
+}
+
+a{
+	text-decoration:none;
+	
+}
+
+.taak{
+	margin-bottom:3px;
+	margin-left:3px;
+	background-color:#D2D2D2;
+    border: 1px solid #D2D2D2; 
+    width: 20px; 
+    height: 20px;
+    border-radius: 10px;
+	cursor:pointer;
+	
+}
+
+.taak:hover{
+	background: #A0F595; 
+	border: 1px solid #6CFF84; 
+	text-decoration: line-through;
+}
+
+
+.taakver{
+	margin-bottom:3px;
+	margin-left:3px;
+	background-color:#B71618;
+    border: 1px solid #E8292C; 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 10px;
+	cursor:pointer;
+}
+
+.taakver:hover{
+	background: #D10508; 
+	border: 1px solid #E8292C; 
+}
+
+.modal
+{
+	border-radius:3px;
+}
+
+.error
+{
+	background-color:red;
+	line-height:32px;
+	color:white;
+}
+
+.error:before
+{
+	content:"!";
+	display:inline-block;
+	width:32px;
+	height:32px;
+	font-size:32px;
+	text-align:center;
+	font-weight:bold;
+	float:left;
+	
+}
