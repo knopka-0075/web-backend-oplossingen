@@ -16,7 +16,7 @@ if(!file_exists($bestand)) {
 	
 $handle = fopen("$bestand", "r");
 
-while (($data = fgetcsv($handle, 0, "\n")) !== FALSE){
+while (($data = fgetcsv($handle, 0, "\n\r")) !== FALSE){
   $data[0] = str_replace("\"", "", $data[0]);
   $velden = explode(";", $data[0]);
 	$import = "INSERT into $tabel(Naam, Voornaam, Adres, Stad) values ('$velden[0]', '$velden[1]', '$velden[2]', '$velden[3]')";
@@ -24,5 +24,5 @@ while (($data = fgetcsv($handle, 0, "\n")) !== FALSE){
 }
 $db->query("ALTER TABLE $tabel ADD id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST");
 
-echo "Het bestand is met succes geïmporteerd.";
+echo "Het bestand is met succes geimporteerd.";
 ?>
