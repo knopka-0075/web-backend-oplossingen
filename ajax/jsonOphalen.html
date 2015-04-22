@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Formulier +resultaat terug van php</title>
+</head>
+<script type="text/javascript">
+
+function jsonOphalen(){
+
+
+	var hr = new XMLHttpRequest();
+	
+	var url = "kindjes.json";
+	
+	hr.open( "GET", url, true);
+	
+	hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	hr.onreadystatechange = function(){
+		if(hr.readyState== 4 && hr.status==200)
+		{
+			var dataterug = JSON.parse(hr.responseText);
+			document.getElementById("terug").innerHTML = "";
+			for(var obj in dataterug){
+				document.getElementById("terug").innerHTML += dataterug[obj].naam + " is " + dataterug[obj].leeftijd + " jaar oud en woont in " + dataterug[obj].stad + "<br />";
+			}
+		}
+	}
+	
+	hr.send(null);
+	document.getElementById("terug").innerHTML = "ik ben nog bezig!"
+}
+	
+</script>
+
+<body>
+<h2>Ajax Formulier</h2>
+<div id="terug"></div>
+<script>jsonOphalen();</script>
+</body>
+</html>

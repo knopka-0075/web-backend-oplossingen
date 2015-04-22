@@ -1,0 +1,15 @@
+RewriteEngine On
+# Deel 1
+# RewriteRule ^original.php$ redirect.php
+
+# Deel 2
+# RewriteRule ^$ original.php
+
+# Deel 3
+# RewriteRule ^rasmus$ original.php?user=rasmus
+
+# Deel4
+# RewriteRule ^original.php/(*.*)/?$ original.php?user=$1
+
+# Deel 5
+RewriteRule ^original.php/(.*)/(.*)/?$ original.php?user=$1&role=$2

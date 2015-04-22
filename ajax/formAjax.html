@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Formulier +resultaat terug van php</title>
+</head>
+<script type="text/javascript">
+
+function doorsturenNaarPhp(){
+
+
+	var hr = new XMLHttpRequest();
+	
+	var url = "formulier.php";
+	var vn = document.getElementById("voornaam").value;
+	var an = document.getElementById("achternaam").value;
+		
+	var vars = "voornaam="+vn+"&achternaam="+an;
+	hr.open( "POST", url, true);
+	
+	hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	hr.onreadystatechange = function(){
+		if(hr.readyState== 4 && hr.status==200)
+		{
+			var dataterug = hr.responseText;
+			document.getElementById("terug").innerHTML = dataterug;
+		}
+	}
+	
+	hr.send(vars);
+	document.getElementById("terug").innerHTML = "ik ben nog bezig!"
+}
+	
+</script>
+
+<body>
+<h2>Ajax Formulier</h2>
+<p>Voornaam: <input id="voornaam" name="voornaam" type="text"> </p>
+<p>Achternaam: <input id="achternaam" name="achternaam" type="text"> </p>
+<input name="knopke" type="submit" value="Verstuur data naar php" onClick="doorsturenNaarPhp();">
+<div id="terug"></div>
+</body>
+</html>

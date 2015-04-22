@@ -1,0 +1,6 @@
+{
+	"k1": {"naam":"olga", "leeftijd":23 ,"stad":"Mechelen" },
+	"k2": {"naam":"stas", "leeftijd":30 ,"stad":"Leuven" },
+	"k3": {"naam":"alisa", "leeftijd":24 ,"stad":"Lier" },
+	"k4": {"naam":"jenya", "leeftijd":23 ,"stad":"Antwerpen" }
+}

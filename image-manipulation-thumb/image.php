@@ -111,10 +111,8 @@
 		{
 			$filenameArray	=	pathinfo( $this->name );
 
-			# Filename bepalen
 			$this->filename	=	$filenameArray[ 'filename' ];
 
-			# Extensie bepalen
 			switch( $this->type )
 			{
 				case 'image/jpeg':

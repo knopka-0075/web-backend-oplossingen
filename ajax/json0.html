@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON basis</title>
+</head>
+<script type="text/javascript">
+	var obj1 = {gebruiker:'Erik' , leftijd: 22 , stad:"Mechelen"};
+	var obj2 = {gebruiker:'Tina' , leftijd: 28 , stad:"Leuven"};
+	var mama = {kind1:obj1, kind2:obj2};
+	document.write(mama.kind2.gebruiker + " woon in " + mama.kind2.staad);
+	document.write(mama["kind1"]["gebruiker"] + " woon in " + mama["kind1"]["stad"]);
+</script>
+
+<body>
+</body>
+</html>

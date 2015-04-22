@@ -1,0 +1,115 @@
+body{
+	font-family: sans-serif;
+	color: #454545;
+}
+
+h1{
+	clear: both;
+	font-size: 32px;
+	font-weight: 200;
+	border-bottom: 1px solid lightgrey;
+}
+
+ul{
+	list-style-type: none;
+}
+
+form{
+	clear: both;
+}
+
+.cadeau input{
+	display: inline;
+}
+
+nav ul{
+	padding: 0;
+}
+
+nav li{
+	display: block;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	border: solid 1px #454545;
+	padding: 8px;
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+
+nav li:hover{
+	background-color: #454545;
+}
+
+nav li:hover > a{
+	color: #ffffff;
+}
+
+nav li a{
+	color: #454545;
+	text-decoration: none;
+}
+
+label{
+	display: block;
+}
+
+input{
+	display: block;
+	padding: 1px 0;
+	margin-bottom: 12px;
+}
+
+input[type="submit"]{
+	padding: 1px 6px;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+thead{
+	font-weight: bold;
+}
+
+td{
+	border: solid 1px #454545;
+	padding: 5px;
+	margin: 0;
+}
+
+.foutmelding{
+	font-size: 14px;
+	color: darkred;
+	background-color: pink;
+	border: solid 1px darkred;
+	padding: 8px;
+}
+
+.toggle{
+	background-color: transparent;
+	border: none;
+	color: blue;
+	cursor: pointer;
+	padding: 0;
+}
+
+span {
+	font-weight: bold;
+	color: darkred;
+}
+
+.hoofd {
+	font-weight: bold;
+	border: 2px solid #000000;
+	color: #000000;
+}
+
+.hoofd td:first-child {
+	border-right: 2px solid #000000;
+}
+
+td {
+	width: 300px;
+}

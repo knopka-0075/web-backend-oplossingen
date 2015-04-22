@@ -49,9 +49,6 @@
 <head>
 </head>
 <body>
-
-	<h1>Voorbeeld van image manipulation: resizing + cropping</h1>
-
 		<img src="img/thumbs/<?= $data['src'] ?>" alt="Verkleinde afbeelding">
 
 	</body>
